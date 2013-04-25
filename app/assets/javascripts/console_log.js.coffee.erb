@@ -1,0 +1,12 @@
+escape_logger = false
+if typeof window.console == 'undefined'
+  window.console = {}
+  escape_logger = true
+<% unless Rails.env.development? %>
+escape_logger = true
+<% end %>
+if escape_logger
+  window.console.log = ->
+  window.console.debug = ->
+  window.console.info = ->
+  window.console.error = ->

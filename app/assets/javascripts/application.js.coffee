@@ -13,5 +13,7 @@
 #= require zepto
 #= require zepto_deferred
 #= require rails
+#= require twitter/bootstrap
+#= require console_log
 #= require_self
 #= require_tree .
