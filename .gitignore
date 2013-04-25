@@ -4,12 +4,31 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
+/Gemfile.lock
+
 # Ignore bundler config
 /.bundle
 
-# Ignore the default SQLite database.
+# Ignore configuration files
+/config/*.yml
+/config/unicorn.rb
+/config/deploy.rb
+
 /db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
-/tmp
+tmp/
+.sass-cache/
+.DS_Store
+Thumbs.db
+*.orig
+*.swp
+*.swo
+
+pkg
+.rvmrc
+/vendor/cache
+/.jhw-cache
+
+/public/assets
