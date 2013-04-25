@@ -169,7 +169,7 @@ if (typeof exports isnt 'undefined')
   exports.installInto = installInto
 else
 # and the browser by setting the functions on `window`.
-  this.Deferred = -> new Deferred();
+  this.Deferred = -> new Deferred()
   this.Deferred.when = _when
   this.Deferred.installInto = installInto
 

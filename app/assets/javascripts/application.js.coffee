@@ -11,6 +11,7 @@
 # GO AFTER THE REQUIRES BELOW.
 #
 #= require zepto
-#= require deferred
+#= require zepto_deferred
 #= require rails
+#= require_self
 #= require_tree .
