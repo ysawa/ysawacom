@@ -27,6 +27,7 @@
    * ======================================================= */
 
   $(function () {
+    $.support = $.support || {}
 
     $.support.transition = (function () {
 
