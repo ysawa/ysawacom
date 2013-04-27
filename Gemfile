@@ -25,9 +25,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-# gem 'jquery-rails'
-gem 'zepto-rails'
-gem 'rails-behaviors'
+gem 'jquery-rails'
+# gem 'zepto-rails'
+# gem 'rails-behaviors'
 
 gem 'haml'
 
