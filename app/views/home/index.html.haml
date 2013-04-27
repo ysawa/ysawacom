@@ -1,2 +1,17 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+#ysawacom
+  #header-region
+  .container
+    #push
+    #main-region
+    %footer#footer-region
+  #now-loading-region
+
+= content_for :after_javascript do
+  :coffee
+    $ ->
+      Ysawacom.start
+        server:
+          env: #{Rails.env.to_json}
+          flash:
+            notice: #{flash[:notice].to_json}
+            error: #{flash[:error].to_json}

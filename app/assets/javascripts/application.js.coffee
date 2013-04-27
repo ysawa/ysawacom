@@ -16,4 +16,4 @@
 #= require twitter/bootstrap
 #= require console_log
 #= require_self
-#= require_tree .
+#= require_directory .
