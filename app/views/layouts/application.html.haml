@@ -2,8 +2,11 @@
 %html(lang="en")
   %head
     = render 'shared/head'
-  %body.common_bg.welcome
-    %section.container
+  - body_klass = (user_signed_in? ? 'common_bg' : 'common_bg welcome')
+  %body{ class: body_klass }
+    - if user_signed_in?
+      = render 'shared/header'
+    %section.container#main_editor
       = bootstrap_flash
       = yield
     = javascript_include_tag "application"
