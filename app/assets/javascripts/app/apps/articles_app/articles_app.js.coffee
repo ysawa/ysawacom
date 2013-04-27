@@ -3,8 +3,8 @@
 
   class ArticlesApp.Router extends Marionette.AppRouter
     appRoutes:
-      "/articles"  : "index"
-      "/articles/:id"  : "show"
+      "articles"  : "index"
+      "articles/:id"  : "show"
 
   API =
     index: ->
