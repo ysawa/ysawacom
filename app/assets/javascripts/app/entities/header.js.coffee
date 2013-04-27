@@ -9,6 +9,7 @@
     getMain: ->
       new Entities.HeaderCollection [
         { name: "Home", url: Routes.root_path(), active: false }
+        { name: "Blog", url: Routes.root_path(), active: false }
       ]
     getSub: ->
       new Entities.HeaderCollection [
