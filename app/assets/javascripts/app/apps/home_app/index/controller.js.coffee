@@ -1,4 +1,4 @@
-@Reqspec.module "HomeApp.Index", (Index, App, Backbone, Marionette, $, _) ->
+@Ysawacom.module "HomeApp.Index", (Index, App, Backbone, Marionette, $, _) ->
 
   Index.Controller =
 

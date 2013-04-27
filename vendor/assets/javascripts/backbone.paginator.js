@@ -1043,4 +1043,4 @@ Backbone.Paginator = (function ( Backbone, _, $ ) {
 
   return Paginator;
 
-}( Backbone, _, jQuery ));
+}( Backbone, _, (Zepto || jQuery) ));

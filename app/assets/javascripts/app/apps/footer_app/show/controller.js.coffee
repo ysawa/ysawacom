@@ -1,4 +1,4 @@
-@Reqspec.module "FooterApp.Show", (Show, App, Backbone, Marionette, $, _) ->
+@Ysawacom.module "FooterApp.Show", (Show, App, Backbone, Marionette, $, _) ->
 
   Show.Controller =
 

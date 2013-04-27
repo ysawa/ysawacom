@@ -1,4 +1,4 @@
-@Reqspec.module "HomeApp", (HomeApp, App, Backbone, Marionette, $, _) ->
+@Ysawacom.module "HomeApp", (HomeApp, App, Backbone, Marionette, $, _) ->
   @startWithParent = false
 
   class HomeApp.Router extends Marionette.AppRouter
