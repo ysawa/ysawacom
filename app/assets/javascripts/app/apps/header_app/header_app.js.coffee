@@ -12,4 +12,4 @@
   HeaderApp.on "start", ->
     API.layout()
     API.list()
-    API.dropdown()
+    # API.dropdown()
