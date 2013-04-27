@@ -5,7 +5,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.brand(href='/#') Reqspec
+      %a.brand(href='/#') ysawa.com
       .container.nav-collapse
         #header-main-region
         #header-sub-region
