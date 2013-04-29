@@ -31,7 +31,7 @@ gem 'jquery-rails'
 
 gem 'haml'
 
-gem 'rabl'
+gem 'rabl-rails'
 gem 'oj'
 gem 'gon'
 

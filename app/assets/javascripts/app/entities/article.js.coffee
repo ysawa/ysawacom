@@ -11,6 +11,11 @@
         base + '/' + @id
       else
         base
+    parse: (response, options) ->
+      if response.article
+        @attributes = _.extend(@attributes, response.article)
+      else
+        @attributes = _.extend(@attributes, response)
 
   class Entities.ArticlesPager extends Entities.Pager
     model: Entities.Article
@@ -31,7 +36,8 @@
     getArticleEntity: (options = {}, callback = null) ->
       article = new Entities.Article(_id: options['id'])
       article.fetch
-        success: ->
+        success: (article, response, options) ->
+          console.log article, response
           if callback
             callback article
 
