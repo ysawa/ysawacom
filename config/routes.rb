@@ -1,5 +1,9 @@
 Ysawacom::Application.routes.draw do
-  resources :articles
+  resources :articles do
+    collection do
+      get 'page/:page', action: :index
+    end
+  end
 
   devise_for :users,
     controllers: { sessions: "devise_sessions" }

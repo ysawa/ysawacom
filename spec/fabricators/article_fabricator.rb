@@ -1,6 +1,6 @@
 Fabricator(:article) do
-  title     "MyString"
-  content   "MyText"
-  slug      "MyString"
-  published false
+  title     { "Article #{sequence(:article_title)}" }
+  content     { "Article Content #{sequence(:article_content)}" }
+  slug     { "article_#{sequence(:article_slug)}" }
+  published true
 end

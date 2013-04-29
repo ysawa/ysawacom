@@ -21,6 +21,7 @@
     model: Entities.Article
     url: -> Routes.articles_path()
     parse: (response) ->
+      super
       results = response.articles
       results
 

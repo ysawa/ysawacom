@@ -9,7 +9,7 @@
 
   API =
     index: (page = 1) ->
-      ArticlesApp.Index.Controller.index()
+      ArticlesApp.Index.Controller.index(page)
     show: (id) ->
       ArticlesApp.Show.Controller.show(id)
 

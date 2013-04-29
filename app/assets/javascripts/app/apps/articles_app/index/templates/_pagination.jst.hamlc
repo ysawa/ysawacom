@@ -1,5 +1,8 @@
+- console.log @
 %ul
-  %li
-    != @linkTo 1, '/articles/page'
-  %li
-    != @linkTo 2, '/articles/page/2'
+  - for page in [1..@totalPages]
+    - href = Routes.articles_path()
+    - if page >= 2
+      - href += "/page/#{page}"
+    %li
+      != @linkTo page, href

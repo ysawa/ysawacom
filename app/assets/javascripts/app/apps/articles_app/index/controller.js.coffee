@@ -26,9 +26,8 @@
         collection: articles
 
     getPaginationView: (articles, page) ->
-      console.log articles
       new Index.Pagination
-        collection: articles
+        model: articles
 
     getLayoutView: ->
       new Index.Layout
