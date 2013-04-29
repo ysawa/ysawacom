@@ -73,7 +73,9 @@ module Ysawacom
       end
     end
 
-    config.hamlcoffee.uglify = true
+    if config.respond_to? :hamlcoffee
+      config.hamlcoffee.uglify = true
+    end
 
     config.generators do |g|
       g.test_framework :rspec, fixture: false, views: true, requests: true, routing: true, helpers: true
