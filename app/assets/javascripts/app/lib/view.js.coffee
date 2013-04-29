@@ -15,7 +15,10 @@
         _.each options, (value, key) ->
           attributes += " #{key}=\"#{value}\""
 
-        "<a href='#{url}'#{attributes}>#{escape(name)}</a>"
+        "<a href='#{url}'#{attributes}>#{@h(name)}</a>"
+
+      h: (text) ->
+        "#{text}".replace('&', '&amp;').replace('\'', '&#039;').replace('"', '&quot;').replace('<', '&lt;').replace('>', '&gt;')
 
       currentUser:
         null

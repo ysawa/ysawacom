@@ -12,10 +12,10 @@
       else
         base
     parse: (response, options) ->
-      if response.article
-        @attributes = _.extend(@attributes, response.article)
-      else
+      if typeof response.article == 'undefined'
         @attributes = _.extend(@attributes, response)
+      else
+        @attributes = _.extend(@attributes, response.article)
 
   class Entities.ArticlesPager extends Entities.Pager
     model: Entities.Article
