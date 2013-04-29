@@ -34,12 +34,9 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @articles = Article.all
+    @articles = Article.page(params[:page])
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @articles }
-    end
+    respond_with @articles
   end
 
   # GET /articles/1

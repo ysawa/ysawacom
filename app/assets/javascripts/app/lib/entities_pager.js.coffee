@@ -10,7 +10,7 @@
     paginator_ui:
       firstPage: 1
       currentPage: 1
-      perPage: 25
+      perPage: 10
       totalPages: 10
     server_api:
       page: ->
