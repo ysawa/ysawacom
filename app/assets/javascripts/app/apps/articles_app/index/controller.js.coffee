@@ -2,9 +2,32 @@
 
   Index.Controller =
 
-    index: ->
-      view = @getArticlesView()
-      App.mainRegion.show view
+    index: (page = 1) ->
+      App.request "article:entities", { page: page }, (articles) =>
 
-    getArticlesView: ->
-      new Index.View
+        @layout = @getLayoutView()
+
+        @layout.on "show", =>
+          @showPagination articles, page
+          @showArticles articles, page
+
+        App.mainRegion.show @layout
+
+    showPagination: (articles, page) ->
+      paginationView = @getPaginationView articles, page
+      @layout.paginationRegion.show paginationView
+
+    showArticles: (articles, page) ->
+      articlesView = @getArticlesView articles, page
+      @layout.articlesRegion.show articlesView
+
+    getArticlesView: (articles, page) ->
+      new Index.Articles
+        collection: articles
+
+    getPaginationView: (articles, page) ->
+      new Index.Pagination
+        collection: articles
+
+    getLayoutView: ->
+      new Index.Layout

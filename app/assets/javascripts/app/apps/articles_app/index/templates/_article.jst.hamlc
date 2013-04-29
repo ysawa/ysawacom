@@ -1,0 +1,2 @@
+%td!= @linkTo @name, Routes.article_path(@_id)
+%td= @created_at

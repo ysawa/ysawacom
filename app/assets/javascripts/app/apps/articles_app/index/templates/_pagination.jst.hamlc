@@ -1,0 +1,5 @@
+%ul
+  %li
+    != @linkTo 1, '/articles/page/1'
+  %li
+    != @linkTo 2, '/articles/page/2'

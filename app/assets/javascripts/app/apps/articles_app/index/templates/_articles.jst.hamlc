@@ -1,0 +1,8 @@
+%h1
+  Articles
+%table.table.table-striped.table-bordered
+  %thead
+    %tr
+      %th Name
+      %th Created
+  %tbody
