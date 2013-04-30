@@ -2,19 +2,24 @@
   .control-group
     = f.label :title, class: 'control-label'
     .controls
-      = f.text_field :title, class: 'text_field'
+      = f.text_field :title, class: 'text_field input input-block-level'
+  .control-group
+    = f.label :description, class: 'control-label'
+    .controls
+      = f.text_area :description, class: 'text_field input input-block-level', rows: 2
   .control-group
     = f.label :content, class: 'control-label'
     .controls
-      = f.text_area :content, class: 'text_field'
+      = f.text_area :content, class: 'text_field input input-block-level', rows: 15
   .control-group
     = f.label :slug, class: 'control-label'
     .controls
-      = f.text_field :slug, class: 'text_field'
+      = f.text_field :slug, class: 'text_field input span2'
   .control-group
-    = f.label :published, class: 'control-label'
     .controls
-      = f.text_field :published, class: 'text_field'
+      = f.label :published do
+        = f.check_box :published, {}, true
+        = Article.human_attribute_name('published')
   .form-actions
     = f.submit nil, class: 'btn btn-primary'
     = link_to t('.cancel', default: t("helpers.links.cancel")), articles_path, class: 'btn'
