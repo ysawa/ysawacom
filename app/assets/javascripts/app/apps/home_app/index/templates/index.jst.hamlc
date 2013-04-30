@@ -43,3 +43,9 @@
     jQuery
   %li
     Zepto.JS
+
+%h2
+  Contact
+%ul
+  %li
+    yoshihirosawa __at__ gmail.com
