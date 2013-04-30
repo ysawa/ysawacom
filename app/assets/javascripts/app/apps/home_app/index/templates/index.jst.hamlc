@@ -16,6 +16,8 @@
   %li
     != @linkTo 'Octopus Validator', 'http://octovalid.info', target: '_blank', external: true
   %li
+    != @linkTo 'EventSoundr', 'http://eventsoundr.com', target: '_blank', external: true
+  %li
     != @linkTo 'Sass Bourbon Package', 'https://github.com/ysawa/sass-bourbon-package', target: '_blank', external: true
 
 %h2
