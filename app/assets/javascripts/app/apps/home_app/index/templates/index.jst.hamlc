@@ -1,4 +1,5 @@
 %h1 ysawa.com
+
 %h2
   Profile
 %ul
@@ -8,3 +9,9 @@
     N88-BASIC on PC-9801 is my hobby in my childhood.
   %li
     Bachelor of Engineering (Computer Science) at Tokyo Institute of Technology.
+
+%h2
+  Works
+%ul
+  %li
+    != @linkTo 'Octopus Validator', 'http://octovalid.info', target: '_blank', external: true
