@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @articles = Article.page(params[:page])
+    @articles = Article.desc(:created_at).page(params[:page])
 
     respond_with @articles
   end
