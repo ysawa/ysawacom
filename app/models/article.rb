@@ -3,6 +3,7 @@ class Article
   include Mongoid::Timestamps
   include Mongoid::Paranoia
   field :content, type: String
+  field :description, type: String
   field :published, type: Boolean
   field :slug, type: String
   field :title, type: String
