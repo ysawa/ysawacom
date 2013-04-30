@@ -2,12 +2,7 @@ require 'spec_helper'
 
 describe "articles/edit" do
   before(:each) do
-    @article = assign(:article, stub_model(Article,
-      title: "MyString",
-      content: "MyText",
-      slug: "MyString",
-      published: false
-    ))
+    @article = assign(:article, Fabricate(:article))
   end
 
   it "renders the edit article form" do
