@@ -1,2 +1,9 @@
-%td!= @linkTo @title, Routes.article_path(@_id)
-%td= @created_at
+%td
+  %strong
+    != @linkTo @title, Routes.article_path(@_id)
+  - if @description
+    %br
+    %small
+      = @description
+%td
+  = @created_at
