@@ -15,3 +15,13 @@
 %ul
   %li
     != @linkTo 'Octopus Validator', 'http://octovalid.info', target: '_blank', external: true
+
+%h2
+  Technologies
+%ul
+  %li
+    Ruby on Rails
+  %li
+    PHP (CakePHP)
+  %li
+    Marionette.JS
