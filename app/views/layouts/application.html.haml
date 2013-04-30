@@ -2,9 +2,10 @@
 %html(lang="en")
   %head
     = render 'shared/head'
-  - body_klass = (user_signed_in? ? 'common_bg' : 'common_bg welcome')
+  - is_devise_controller = controller_path =~ /^devise/
+  - body_klass = (is_devise_controller ? 'common_bg welcome' : 'common_bg')
   %body{ class: body_klass }
-    - if user_signed_in?
+    - unless is_devise_controller
       = render 'shared/header'
     %section.container#main_editor
       = bootstrap_flash

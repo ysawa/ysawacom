@@ -9,7 +9,8 @@
       .nav-collapse
         %ul.nav
           %li= link_to Article.model_name.human, articles_path
-        .pull-right
-          %ul.nav
-            %li= link_to t('helpers.links.sign_out'), destroy_user_session_path, method: 'delete'
+        - if user_signed_in?
+          .pull-right
+            %ul.nav
+              %li= link_to t('helpers.links.sign_out'), destroy_user_session_path, method: 'delete'
 
