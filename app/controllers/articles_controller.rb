@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
     if @article.save
       respond_with @article
     else
-      render action: :new
+      render action: :edit
     end
   end
 
@@ -29,7 +29,9 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = Article.new
-    respond_with @article
+    respond_with @article do |format|
+      format.html { render :edit }
+    end
   end
 
   # GET /articles

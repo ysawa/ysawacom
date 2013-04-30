@@ -3,10 +3,10 @@ require 'spec_helper'
 describe "articles/show" do
   before(:each) do
     @article = assign(:article, stub_model(Article,
-      :title => "Title",
-      :content => "MyText",
-      :slug => "Slug",
-      :published => false
+      title: "Title",
+      content: "MyText",
+      slug: "Slug",
+      published: false
     ))
   end
 
