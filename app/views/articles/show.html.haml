@@ -1,31 +1,35 @@
 - model_class = Article
 .page-header
-  %h1=t '.title', default: model_class.model_name.human
+  %h1
+    - if @article.title
+      = @article.title
+    - else
+      = t '.title', default: model_class.model_name.human
 
-%p
-  %strong= model_class.human_attribute_name(:id) + ':'
-  %br
-  = @article.id
-%p
-  %strong= model_class.human_attribute_name(:title) + ':'
-  %br
-  = @article.title
-%p
-  %strong= model_class.human_attribute_name(:description) + ':'
-  %br
-  = @article.description
-%p
-  %strong= model_class.human_attribute_name(:content) + ':'
-  %br
-  = @article.content
-%p
-  %strong= model_class.human_attribute_name(:slug) + ':'
-  %br
-  = @article.slug
-%p
-  %strong= model_class.human_attribute_name(:published) + ':'
-  %br
-  = @article.published
+%section.content
+  = markdown.render(@article.content).html_safe
+
+.well
+  %p
+    %strong= model_class.human_attribute_name(:id) + ':'
+    %br
+    = @article.id
+  %p
+    %strong= model_class.human_attribute_name(:title) + ':'
+    %br
+    = @article.title
+  %p
+    %strong= model_class.human_attribute_name(:description) + ':'
+    %br
+    = @article.description
+  %p
+    %strong= model_class.human_attribute_name(:slug) + ':'
+    %br
+    = @article.slug
+  %p
+    %strong= model_class.human_attribute_name(:published) + ':'
+    %br
+    = @article.published
 
 - if user_signed_in?
   .form-actions
