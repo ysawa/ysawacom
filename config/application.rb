@@ -86,3 +86,5 @@ module Ysawacom
     end
   end
 end
+
+Haml::Template.options[:ugly] = true
