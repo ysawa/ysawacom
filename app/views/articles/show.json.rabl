@@ -2,5 +2,7 @@ object false
 
 child :@article do
   extends 'articles/_base'
-  attributes :content
+  node(:content_html) do |model|
+    model.content
+  end
 end
