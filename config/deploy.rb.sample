@@ -55,22 +55,22 @@ namespace :deploy do
 
   desc "Symlinks files to configure"
   task :symlink_config, roles: :app do
-    files = %w(database.yml unicorn.rb)
+    files = %w(mongoid.yml unicorn.rb)
     files.each do |file|
       run "ln -nfs #{shared_path}/config/#{file} #{release_path}/config/#{file}"
     end
   end
 
-  desc "Symlinks db file"
-  task :symlink_db, roles: :db do
-    files = %w(production.sqlite3)
-    files.each do |file|
-      run "ln -nfs #{shared_path}/db/#{file} #{release_path}/db/#{file}"
+  namespace :db do
+    desc "Creates seeds"
+    task :seed do
+      run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
     end
-  end
 
-  task :seed do
-    run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
+    desc "Creates indexes"
+    task :create_indexes, roles: :db do
+      run "cd #{current_path} && rake db:mongoid:create_indexes"
+    end
   end
 end
 after 'deploy:setup', 'deploy:setup_app_directories'
