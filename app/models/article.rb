@@ -7,4 +7,7 @@ class Article
   field :published, type: Boolean
   field :slug, type: String
   field :title, type: String
+
+  index(created_at: -1)
+  index(slug: 1)
 end
