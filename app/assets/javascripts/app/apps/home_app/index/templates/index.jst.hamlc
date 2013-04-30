@@ -26,6 +26,20 @@
   %li
     Ruby on Rails
   %li
+    MongoDB
+  %li
+    Sass
+  %li
+    CoffeeScript
+  %li
+    Haml
+  %li
+    MySQL
+  %li
     PHP (CakePHP)
   %li
     Marionette.JS
+  %li
+    jQuery
+  %li
+    Zepto.JS
