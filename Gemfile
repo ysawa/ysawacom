@@ -35,6 +35,8 @@ gem 'rabl-rails'
 gem 'oj'
 gem 'gon'
 
+gem 'redcarpet'
+
 # Pagination
 gem 'kaminari'
 
