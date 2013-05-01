@@ -1,5 +1,7 @@
 %article.article
   %h1= @title
+  %small.description
+    = @description
   %section.content
     != @content_html
 
