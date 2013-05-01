@@ -31,6 +31,29 @@
 %h2
   %i.icon-hand-right
   Technologies
+
+%h3
+  Server / API
+%ul
+  %li
+    Ruby on Rails
+  %li
+    CakePHP
+  %li
+    Puppet
+  %li
+    Ubuntu
+  %li
+    Cent OS
+
+%h3
+  Database
+%ul
+  %li
+    MongoDB
+  %li
+    MySQL
+
 %h3
   Front-end
 %ul
@@ -48,26 +71,10 @@
     jQuery
   %li
     Zepto.JS
-
-%h3
-  Database
-%ul
   %li
-    MongoDB
+    HTML5
   %li
-    MySQL
-
-%h3
-  Server / API
-%ul
-  %li
-    Ruby on Rails
-  %li
-    CakePHP
-  %li
-    Puppet
-  %li
-    Ubuntu
+    CSS3
 
 %h2
   %i.icon-hand-right
