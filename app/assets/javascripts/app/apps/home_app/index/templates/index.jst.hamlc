@@ -31,11 +31,9 @@
 %h2
   %i.icon-hand-right
   Technologies
+%h3
+  Front-end
 %ul
-  %li
-    Ruby on Rails
-  %li
-    MongoDB
   %li
     Sass
   %li
@@ -43,15 +41,33 @@
   %li
     Haml
   %li
-    MySQL
-  %li
-    PHP (CakePHP)
+    PHP
   %li
     Marionette.JS
   %li
     jQuery
   %li
     Zepto.JS
+
+%h3
+  Database
+%ul
+  %li
+    MongoDB
+  %li
+    MySQL
+
+%h3
+  Server / API
+%ul
+  %li
+    Ruby on Rails
+  %li
+    CakePHP
+  %li
+    Puppet
+  %li
+    Ubuntu
 
 %h2
   %i.icon-hand-right
