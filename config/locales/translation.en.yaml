@@ -1,6 +1,7 @@
 en:
   helpers:
     links:
+      preview: 'Preview'
       sign_out: 'Sign Out'
 
   views:
