@@ -68,11 +68,15 @@
   %li
     PHP
   %li
-    Marionette.JS
+    Backbone.js
+  %li
+    Underscore.js
+  %li
+    Marionette.js
   %li
     jQuery
   %li
-    Zepto.JS
+    Zepto.js
   %li
     HTML5
   %li
