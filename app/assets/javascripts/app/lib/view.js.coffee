@@ -13,7 +13,11 @@
           return
         year = time.getFullYear()
         month = time.getMonth() + 1
+        if month <= 9
+          month = "0#{month}"
         day = time.getDate()
+        if day <= 9
+          day = "0#{day}"
         hour = time.getHours()
         if hour <= 9
           hour = "0#{hour}"
