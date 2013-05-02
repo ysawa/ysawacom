@@ -24,11 +24,13 @@
   %li
     CakePHP
   %li
-    Puppet
-  %li
     Ubuntu
   %li
     Cent OS
+  %li
+    Puppet
+  %li
+    Capistrano
 
 %h3
   Database
