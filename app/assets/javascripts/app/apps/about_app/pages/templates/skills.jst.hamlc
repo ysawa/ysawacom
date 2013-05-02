@@ -4,7 +4,7 @@
 
 %h2
   %i.icon-hand-right
-  Specialty
+  Specialties
 %ul
   %li
     Reduce loading time for web sites and web-based application. Diminished 500KB resources into less than 100KB.
