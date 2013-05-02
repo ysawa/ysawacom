@@ -6,4 +6,4 @@
     %small
       = @description
 %td
-  = @created_at
+  = @formattedTime @created_at
