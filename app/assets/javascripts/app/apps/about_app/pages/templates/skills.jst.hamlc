@@ -17,6 +17,11 @@
 
 %h2
   %i.icon-hand-right
+  Languages
+#language_skills.plot
+
+%h2
+  %i.icon-hand-right
   Technologies
 
 %h3

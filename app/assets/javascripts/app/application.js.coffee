@@ -16,6 +16,7 @@
 #= require_tree ./entities
 #= require_tree ./apps
 #= require flot/jquery.flot
+#= require flot/jquery.flot.categories
 #= require_directory .
 
 @Ysawacom = do (Backbone, Marionette) ->
