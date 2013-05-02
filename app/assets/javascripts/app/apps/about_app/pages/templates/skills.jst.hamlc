@@ -29,6 +29,14 @@
     MySQL
 
 %h3
+  Version Management
+%ul
+  %li
+    Git
+  %li
+    Subversion
+
+%h3
   Front-end
 %ul
   %li
