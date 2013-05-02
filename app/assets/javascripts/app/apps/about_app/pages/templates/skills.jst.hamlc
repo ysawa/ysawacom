@@ -54,6 +54,16 @@
     MySQL
 
 %h3
+  Editor
+%ul
+  %li
+    Vim
+  %li
+    Eclipse
+  %li
+    Visual Studio
+
+%h3
   Version Management
 %ul
   %li
