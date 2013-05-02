@@ -5,4 +5,5 @@
     %tr
       %th Title
       %th Created
+      %th Updated
   %tbody

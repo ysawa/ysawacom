@@ -7,3 +7,5 @@
       = @description
 %td
   = @formattedTime @created_at
+%td
+  = @formattedTime @updated_at
