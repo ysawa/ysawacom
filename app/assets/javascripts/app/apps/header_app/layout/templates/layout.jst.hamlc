@@ -6,6 +6,6 @@
         %span.icon-bar
         %span.icon-bar
       %a.brand(href='/#') ysawa.com
-      .container.nav-collapse.collapse
+      .container.nav-collapse
         #header-main-region
         #header-sub-region
