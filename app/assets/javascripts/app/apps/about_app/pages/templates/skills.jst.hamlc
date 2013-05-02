@@ -64,3 +64,10 @@
   %li
     Ajax (Pjax)
 
+%h3
+  Store Application Development
+%ul
+  %li
+    Windows 8
+  %li
+    Titanium
