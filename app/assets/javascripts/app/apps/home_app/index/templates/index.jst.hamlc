@@ -81,6 +81,8 @@
     HTML5
   %li
     CSS3
+  %li
+    Ajax (Pjax)
 
 %h2
   %i.icon-hand-right
