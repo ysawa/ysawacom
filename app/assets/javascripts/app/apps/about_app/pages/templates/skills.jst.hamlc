@@ -1,0 +1,58 @@
+%h1
+  %i.icon-wrench
+  Skills
+
+%h2
+  %i.icon-hand-right
+  Technologies
+
+%h3
+  Server / API
+%ul
+  %li
+    Ruby on Rails
+  %li
+    CakePHP
+  %li
+    Puppet
+  %li
+    Ubuntu
+  %li
+    Cent OS
+
+%h3
+  Database
+%ul
+  %li
+    MongoDB
+  %li
+    MySQL
+
+%h3
+  Front-end
+%ul
+  %li
+    Sass
+  %li
+    CoffeeScript
+  %li
+    Haml
+  %li
+    PHP
+  %li
+    Backbone.js
+  %li
+    Underscore.js
+  %li
+    Marionette.js
+  %li
+    jQuery
+  %li
+    Zepto.js
+  %li
+    HTML5
+  %li
+    CSS3
+  %li
+    Ajax (Pjax)
+
