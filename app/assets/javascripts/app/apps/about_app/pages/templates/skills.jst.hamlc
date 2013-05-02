@@ -3,6 +3,7 @@
   Skills
 
 %h2
+  %i.icon-hand-right
   Specialty
 %ul
   %li
