@@ -1,4 +1,6 @@
-%h1 ysawa.com
+%h1
+  %i.icon-off
+  ysawa.com
 
 %h2
   %i.icon-hand-right
