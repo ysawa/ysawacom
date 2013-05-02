@@ -41,5 +41,5 @@
   Technologies and Skills
 %p
   Watch
-  != @linkTo 'Skills page', '#/about/skills'
+  != @linkTo 'Skills page', '/about/skills'
   \.
