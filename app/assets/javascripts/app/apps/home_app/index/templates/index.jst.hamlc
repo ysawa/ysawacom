@@ -87,4 +87,6 @@
   Contact
 %ul
   %li
+    != @linkTo 'facebook', 'http://www.facebook.com/yoshihiro.sawadesu', target: '_blank', external: true
+  %li
     yoshihirosawa __at__ gmail.com
