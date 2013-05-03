@@ -20,11 +20,13 @@
         ['C/C++', 2]
         ['D', 2]
       ]
-      languages = _.collect(data, (datum) -> datum[0])
+      dataKeys = _.collect(data, (datum) -> datum[0])
       options =
         xaxis:
           mode: "categories"
-          categories: languages
+          categories: dataKeys
+          max: dataKeys.length
+          min: -1
         yaxis:
           max: 10
         series:
@@ -45,18 +47,20 @@
         ['Cent 0S', 5]
         ['Windows 8', 5]
       ]
-      languages = _.collect(data, (datum) -> datum[0])
+      dataKeys = _.collect(data, (datum) -> datum[0])
       options =
         xaxis:
           mode: "categories"
-          categories: languages
+          categories: dataKeys
+          max: dataKeys.length
+          min: -1
         yaxis:
           max: 10
         series:
           color: 2
           bars:
             show: true
-            barWidth: 0.6
+            barWidth: 0.3
             align: 'center'
         grid:
           backgroundColor:
