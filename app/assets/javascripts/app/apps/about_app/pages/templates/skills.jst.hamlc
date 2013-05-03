@@ -22,8 +22,14 @@
   Let's plot my writing skills of languages.
 #language_skills.plot
 
+%h2
+  %i.icon-hand-right
+  Operating Systems
 %p
-  I am good at writing Ruby and JavaScript. My PHP and Japanese are not bad. The other languages above are my hobbies.
+  Let's make a graph of my skills and experiences of operating systems.
+#operating_system_skills.plot
+%p
+  My favorite OS is Ubuntu and Mac. Both are very refined and very useful. Also, I am OK with Windows 8 and Cent OS.
 
 %h2
   %i.icon-hand-right

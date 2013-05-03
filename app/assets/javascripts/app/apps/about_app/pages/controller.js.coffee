@@ -6,6 +6,7 @@
       view = @getSkillsView()
       App.mainRegion.show view
       @drawLanguageSkills()
+      @drawOperatingSystemSkills()
 
     drawLanguageSkills: ->
       data = [
@@ -36,6 +37,31 @@
           backgroundColor:
             colors: ["#f5f5f5", "#d3d3d3"]
       $.plot('#language_skills', [data], options)
+
+    drawOperatingSystemSkills: ->
+      data = [
+        ['Ubuntu', 7]
+        ['Mac OS X', 7]
+        ['Cent 0S', 5]
+        ['Windows 8', 5]
+      ]
+      languages = _.collect(data, (datum) -> datum[0])
+      options =
+        xaxis:
+          mode: "categories"
+          categories: languages
+        yaxis:
+          max: 10
+        series:
+          color: 2
+          bars:
+            show: true
+            barWidth: 0.6
+            align: 'center'
+        grid:
+          backgroundColor:
+            colors: ["#f5f5f5", "#d3d3d3"]
+      $.plot('#operating_system_skills', [data], options)
 
     getSkillsView: ->
       new Pages.Skills
