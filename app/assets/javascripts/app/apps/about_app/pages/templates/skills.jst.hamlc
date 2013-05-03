@@ -17,6 +17,15 @@
 
 %h2
   %i.icon-hand-right
+  Job Levels
+%p
+  My job skills are here.
+#job_levels.plot
+%p
+  When I was a programmer at the first time, I works as a engineer to save resources. It's very important nowadays and I am making some systems more efficiently. Next, I am confident in my coding. I write codes for both the server side and the client side.
+
+%h2
+  %i.icon-hand-right
   Languages
 %p
   Let's plot my writing skills of languages.

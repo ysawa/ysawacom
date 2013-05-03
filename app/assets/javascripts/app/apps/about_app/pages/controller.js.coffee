@@ -5,8 +5,41 @@
     skills: ->
       view = @getSkillsView()
       App.mainRegion.show view
+      @drawJobLevels()
       @drawLanguageSkills()
       @drawOperatingSystemSkills()
+
+    drawJobLevels: ->
+      data = [
+        ['Saving<br>resources', 8]
+        ['Front-end<br>coding', 7]
+        ['Server-side<br>coding', 7]
+        ['Lecture', 7]
+        ['Designing<br>softwares', 6]
+        ['Deciding<br>specifications', 6]
+        ['Constructing<br>server', 5]
+        ['Security', 4]
+        ['Direction', 3]
+      ]
+      dataKeys = _.collect(data, (datum) -> datum[0])
+      options =
+        xaxis:
+          mode: "categories"
+          categories: dataKeys
+          max: dataKeys.length
+          min: -1
+        yaxis:
+          max: 10
+        series:
+          color: 0
+          bars:
+            show: true
+            barWidth: 0.6
+            align: 'center'
+        grid:
+          backgroundColor:
+            colors: ["#f5f5f5", "#d3d3d3"]
+      $.plot('#job_levels', [data], options)
 
     drawLanguageSkills: ->
       data = [
