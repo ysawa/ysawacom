@@ -27,10 +27,14 @@
         yaxis:
           max: 10
         series:
+          color: 4
           bars:
             show: true
             barWidth: 0.6
             align: 'center'
+        grid:
+          backgroundColor:
+            colors: ["#f5f5f5", "#d3d3d3"]
       $.plot('#language_skills', [data], options)
 
     getSkillsView: ->
