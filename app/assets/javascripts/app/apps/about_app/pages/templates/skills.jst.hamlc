@@ -72,6 +72,16 @@
     Subversion
 
 %h3
+  Project Management
+%ul
+  %li
+    ChiliProject (Redmine)
+  %li
+    Backlog
+  %li
+    Github
+
+%h3
   Front-end
 %ul
   %li
