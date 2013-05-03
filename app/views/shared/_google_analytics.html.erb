@@ -1,3 +1,4 @@
+<%- if Rails.env.production? %>
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-40212461-1']);
@@ -9,3 +10,6 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<%- else %>
+<!-- google analytics tracking codes here if production -->
+<%- end %>
