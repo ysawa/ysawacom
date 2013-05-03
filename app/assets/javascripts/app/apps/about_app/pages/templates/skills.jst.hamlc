@@ -21,6 +21,8 @@
 %p
   Let's plot my writing skills of languages.
 #language_skills.plot
+%p
+  I am good at writing Ruby and JavaScript. My PHP and Japanese are not bad. The other languages above are my hobbies.
 
 %h2
   %i.icon-hand-right
