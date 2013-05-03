@@ -108,6 +108,10 @@
     CSS3
   %li
     Ajax (Pjax)
+  %li
+    Twitter Bootstrap
+  %li
+    Responsive Web Design
 
 %h3
   Store Application Development
