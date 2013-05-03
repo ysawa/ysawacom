@@ -2,8 +2,8 @@
 %html(lang="en")
   %head
     = render 'shared/head'
-  %body.common_bg
     = render 'shared/google_analytics'
+  %body.common_bg
     = yield
     = include_gon
     = javascript_include_tag "application"
