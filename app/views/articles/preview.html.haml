@@ -1,0 +1,9 @@
+- model_class = Article
+- decorator = ArticleDecorator.new @article
+%h1
+  = decorator.title
+%small
+  = decorator.description
+
+%section.content
+  = decorator.content

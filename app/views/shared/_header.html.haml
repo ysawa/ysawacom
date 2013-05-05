@@ -6,11 +6,12 @@
         %span.icon-bar
         %span.icon-bar
       %a.brand{href: articles_path} ysawa.com
-      .nav-collapse
-        %ul.nav
-          %li= link_to Article.model_name.human, articles_path
-        - if user_signed_in?
-          .pull-right
-            %ul.nav
-              %li= link_to t('helpers.links.sign_out'), destroy_user_session_path, method: 'delete'
-
+      - unless @preview_mode
+        .nav-collapse
+          %ul.nav
+            %li= link_to Article.model_name.human, articles_path
+          - if user_signed_in?
+            .pull-right
+              %ul.nav
+                %li= link_to t('helpers.links.home'), root_path
+                %li= link_to t('helpers.links.sign_out'), destroy_user_session_path, method: 'delete'

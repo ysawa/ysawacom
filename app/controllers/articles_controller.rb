@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   respond_to :html, :json
 
-  before_filter :find_article, only: %i(destroy edit show update)
+  before_filter :find_article, only: %i(destroy edit preview show update)
 
   # POST /articles
   def create
@@ -54,6 +54,11 @@ class ArticlesController < ApplicationController
         render
       end
     end
+  end
+
+  # GET /articles/1/preview
+  def preview
+    set_preview_mode
   end
 
   # GET /articles/1
