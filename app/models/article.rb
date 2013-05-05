@@ -10,4 +10,10 @@ class Article
 
   index(created_at: -1)
   index(slug: 1)
+
+  class << self
+    def published
+      criteria.where(published: true)
+    end
+  end
 end

@@ -36,9 +36,18 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @articles = Article.desc(:created_at).page(params[:page])
-
-    respond_with @articles
+    @articles = Article.desc(:created_at)
+    respond_to do |format|
+      format.html do
+        @articles = @articles.page(params[:page])
+        render
+      end
+      format.any do
+        @articles = @articles.page(params[:page])
+        @articles = @articles.published
+        render
+      end
+    end
   end
 
   # GET /articles/1
