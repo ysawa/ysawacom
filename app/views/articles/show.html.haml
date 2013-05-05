@@ -1,13 +1,12 @@
 - model_class = Article
-.page-header
-  %h1
-    - if @article.title
-      = @article.title
-    - else
-      = t '.title', default: model_class.model_name.human
+- decorator = ArticleDecorator.new @article
+%h1
+  = decorator.title
+%small
+  = decorator.description
 
 %section.content
-  = markdown.render(@article.content).html_safe
+  = decorator.content
 
 .well
   %p
@@ -37,3 +36,7 @@
     = link_to t('.edit', default: t("helpers.links.edit")), edit_article_path(@article), class: 'btn btn-primary'
     = link_to t('.preview', default: t("helpers.links.preview")), "/##{article_path(@article)}", class: 'btn btn-info', target: :_blank
     = link_to t('.destroy', default: t("helpers.links.destroy")), article_path(@article), method: "delete", data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) }, class: 'btn btn-danger'
+= content_for :after_javascript do
+  :coffee
+    $ ->
+      $('.content > h2').prepend('<i class="icon-hand-right"></i> ')
