@@ -17,7 +17,7 @@
         ['Lecture', 7]
         ['Designing<br>softwares', 6]
         ['Deciding<br>specifications', 6]
-        ['Constructing<br>server', 5]
+        ['Constructing<br>servers', 5]
         ['Security', 4]
         ['Direction', 3]
       ]
