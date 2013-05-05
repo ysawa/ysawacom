@@ -8,7 +8,12 @@ class ArticlesController < ApplicationController
     @article = Article.new(params[:article])
 
     if @article.save
-      respond_with @article
+      flash[:notice] = 'Article was successfully created.'
+      if params[:commit] == t('helpers.submit.save_and_continue')
+        respond_with @article, location: { action: :edit }
+      else
+        respond_with @article
+      end
     else
       render action: :edit
     end
@@ -59,7 +64,11 @@ class ArticlesController < ApplicationController
   def update
     if @article.update_attributes(params[:article])
       flash[:notice] = 'Article was successfully updated.'
-      respond_with @article
+      if params[:commit] == t('helpers.submit.save_and_continue')
+        respond_with @article, location: { action: :edit }
+      else
+        respond_with @article
+      end
     else
       render action: :edit
     end

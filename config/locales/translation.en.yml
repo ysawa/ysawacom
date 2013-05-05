@@ -3,6 +3,9 @@ en:
     links:
       preview: 'Preview'
       sign_out: 'Sign Out'
+    submit:
+      save: 'Save'
+      save_and_continue: 'Continue'
 
   views:
     pagination:
