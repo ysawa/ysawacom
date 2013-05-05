@@ -2,33 +2,45 @@
 - decorator = ArticleDecorator.new @article
 %h1
   = decorator.title
-%small
-  = decorator.description
 
-%section.content
-  = decorator.content
-
-.well
-  %p
-    %strong= model_class.human_attribute_name(:id) + ':'
-    = @article.id
-  %p
-    %strong= model_class.human_attribute_name(:title) + ':'
-    = @article.title
-  %p
-    %strong= model_class.human_attribute_name(:description) + ':'
-    = @article.description
-  %p
-    %strong= model_class.human_attribute_name(:slug) + ':'
-    = @article.slug
-  %p
-    %strong= model_class.human_attribute_name(:published) + ':'
-    = @article.published
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Attribute
+      %th
+        Content
+  %tbody
+    %tr
+      %th
+        = model_class.human_attribute_name(:id)
+      %td
+        = @article.id
+    %tr
+      %th
+        = model_class.human_attribute_name(:title)
+      %td
+        = @article.title
+    %tr
+      %th
+        = model_class.human_attribute_name(:description)
+      %td
+        = @article.description
+    %tr
+      %th
+        = model_class.human_attribute_name(:slug)
+      %td
+        = @article.slug
+    %tr
+      %th
+        = model_class.human_attribute_name(:published)
+      %td
+        = @article.published
 
 - if user_signed_in?
   .form-actions
     = link_to t('.back', default: t("helpers.links.back")), articles_path, class: 'btn'
     = link_to t('.edit', default: t("helpers.links.edit")), edit_article_path(@article), class: 'btn btn-primary'
-    = link_to t('.preview', default: t("helpers.links.preview")), preview_article_path(@article), class: 'btn btn-info'
+    = link_to t('.preview', default: t("helpers.links.preview")), preview_article_path(@article), class: 'btn btn-info', target: :_blank
     = link_to t('.destroy', default: t("helpers.links.destroy")), article_path(@article), method: "delete", data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) }, class: 'btn btn-danger'
 = render 'content_scripts'
