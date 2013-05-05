@@ -15,27 +15,27 @@
       %th
         = model_class.human_attribute_name(:id)
       %td
-        = @article.id
+        = decorator.id
     %tr
       %th
         = model_class.human_attribute_name(:title)
       %td
-        = @article.title
+        = decorator.title
     %tr
       %th
         = model_class.human_attribute_name(:description)
       %td
-        = @article.description
+        = decorator.description
     %tr
       %th
         = model_class.human_attribute_name(:slug)
       %td
-        = @article.slug
+        = decorator.slug
     %tr
       %th
         = model_class.human_attribute_name(:published)
       %td
-        = @article.published
+        = decorator.published
 
 - if user_signed_in?
   .form-actions

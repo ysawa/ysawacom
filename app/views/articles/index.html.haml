@@ -12,11 +12,12 @@
         %th=t '.actions', default: t("helpers.actions")
   %tbody
     - @articles.each do |article|
+      - decorator = ArticleDecorator.new article
       %tr
         %td= link_to article.id, article_path(article)
-        %td= article.title
-        %td= article.slug
-        %td= article.published
+        %td= decorator.title
+        %td= decorator.slug
+        %td= decorator.published
         %td=l article.created_at if article.created_at
         - if user_signed_in?
           %td

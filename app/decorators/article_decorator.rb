@@ -14,4 +14,12 @@ class ArticleDecorator < Draper::Decorator
       t '.title', default: model_class.model_name.human
     end
   end
+
+  def published
+    if model.published?
+      h.content_tag :span, I18n.t('articles.statuses.published'), class: 'label label-success'
+    else
+      h.content_tag :span, I18n.t('articles.statuses.unpublished'), class: 'label label-warning'
+    end
+  end
 end

@@ -15,3 +15,9 @@ en:
       previous: "&lsaquo;"
       next: "&rsaquo;"
       truncate: "..."
+
+
+  articles:
+    statuses:
+      published: 'Published'
+      unpublished: 'Unpublished'
