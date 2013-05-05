@@ -17,3 +17,4 @@
     showArticleView: (article) ->
       view = new Show.Article(model: article)
       @layout.articleRegion.show view
+      view.$el.find('.content > h2').prepend('<i class="icon-hand-right"></i> ')
