@@ -4,6 +4,7 @@ en:
       preview: 'Preview'
       sign_out: 'Sign Out'
     submit:
+      preview: 'Preview'
       save: 'Save'
       save_and_continue: 'Continue'
 

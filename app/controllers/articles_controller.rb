@@ -7,7 +7,9 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(params[:article])
 
-    if @article.save
+    if render_preview_if_enabled
+      # do nothing
+    elsif @article.save
       flash[:notice] = 'Article was successfully created.'
       if params[:commit] == t('helpers.submit.save_and_continue')
         respond_with @article, location: { action: :edit }
@@ -68,7 +70,10 @@ class ArticlesController < ApplicationController
 
   # PUT /articles/1
   def update
-    if @article.update_attributes(params[:article])
+    @article.write_attributes(params[:article])
+    if render_preview_if_enabled
+      # do nothing
+    elsif @article.save
       flash[:notice] = 'Article was successfully updated.'
       if params[:commit] == t('helpers.submit.save_and_continue')
         respond_with @article, location: { action: :edit }
@@ -84,5 +89,13 @@ private
 
   def find_article
     @article = Article.find(params[:id])
+  end
+
+  def render_preview_if_enabled
+    if params[:preview]
+      set_preview_mode
+      render action: :preview
+      return true
+    end
   end
 end

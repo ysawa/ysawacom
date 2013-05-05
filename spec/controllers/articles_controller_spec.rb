@@ -86,11 +86,7 @@ describe ArticlesController do
     describe "with valid params" do
       it "updates the requested article" do
         article = Article.create! valid_attributes
-        # Assuming there are no other articles in the database, this
-        # specifies that the Article created on the previous line
-        # receives the :update_attributes message with whatever params are
-        # submitted in the request.
-        Article.any_instance.should_receive(:update_attributes).with({ "title" => "MyString" })
+        Article.any_instance.should_receive(:write_attributes).with({ "title" => "MyString" })
         put :update, {id: article.to_param, article: { "title" => "MyString" }}
       end
 
