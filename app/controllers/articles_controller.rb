@@ -42,7 +42,7 @@ class ArticlesController < ApplicationController
         @articles = @articles.page(params[:page])
         render
       end
-      format.any do
+      format.json do
         @articles = @articles.page(params[:page])
         @articles = @articles.published
         render
