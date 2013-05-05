@@ -21,13 +21,13 @@
         = f.check_box :published, {}, true
         = Article.human_attribute_name('published')
   .form-actions
-    = f.submit t('helpers.submit.save'), class: 'btn btn-primary'
-    = f.submit t('helpers.submit.save_and_continue'), class: 'btn btn-success'
-    = f.submit t('helpers.submit.preview'), class: 'btn btn-info btn-preview'
     - if @article.persisted?
       = link_to t('helpers.links.back'), @article, class: 'btn'
     - else
       = link_to t('helpers.links.back'), articles_path, class: 'btn'
+    = f.submit t('helpers.submit.save'), class: 'btn btn-primary'
+    = f.submit t('helpers.submit.save_and_continue'), class: 'btn btn-success'
+    = f.submit t('helpers.submit.preview'), class: 'btn btn-info btn-preview'
 
 = content_for :after_javascript do
   :coffee
