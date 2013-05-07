@@ -102,3 +102,11 @@
 
     getSkillsView: ->
       new Pages.Skills
+
+    works: ->
+      view = @getWorksView()
+      App.mainRegion.show view
+
+    getWorksView: ->
+      new Pages.Works
+

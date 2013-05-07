@@ -11,6 +11,7 @@
         { name: "Home", url: Routes.root_path(), active: false }
         { name: "Articles", url: Routes.articles_path(), active: false }
         { name: "Skills", url: '/about/skills', active: false }
+        { name: "Works", url: '/about/works', active: false }
       ]
     getSub: ->
       new Entities.HeaderCollection [

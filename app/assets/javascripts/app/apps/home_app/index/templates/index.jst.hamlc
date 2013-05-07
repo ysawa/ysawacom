@@ -21,27 +21,17 @@
 
 %h2
   %i.icon-hand-right
-  Works
-%ul
-  %li
-    != @linkTo 'Octopus Validator', 'http://octovalid.info', target: '_blank', external: true
-  %li
-    != @linkTo 'EventSoundr', 'http://eventsoundr.com', target: '_blank', external: true
-  %li
-    != @linkTo 'Sass Bourbon Package (github)', 'https://github.com/ysawa/sass-bourbon-package', target: '_blank', external: true
-  %li
-    != @linkTo 'checkdomain (github)', 'https://github.com/ysawa/checkdomain', target: '_blank', external: true
-  %li
-    != @linkTo 'ysawa.com (github)', 'https://github.com/ysawa/ysawacom', target: '_blank', external: true
-  %li
-    Some lectures at companies in Japan about jQuery, Git, Sass, PHP, Ruby and so on.
-  %li
-    Many other works for businesses.
-
-%h2
-  %i.icon-hand-right
   Technologies and Skills
 %p
   Watch
   != @linkTo 'Skills page', '/about/skills'
   \.
+
+%h2
+  %i.icon-hand-right
+  Works
+%p
+  Read
+  != @linkTo 'Works page', '/about/works'
+  \.
+
