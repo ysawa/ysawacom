@@ -11,6 +11,8 @@
   %li
     != @linkTo 'Sass Bourbon Package (github)', 'https://github.com/ysawa/sass-bourbon-package', target: '_blank', external: true
   %li
+    != @linkTo 'Sass Basic Lecture (heroku, Japanese)', 'http://sassbasiclecture.herokuapp.com/', target: '_blank', external: true
+  %li
     != @linkTo 'checkdomain (github)', 'https://github.com/ysawa/checkdomain', target: '_blank', external: true
   %li
     != @linkTo 'ysawa.com (github)', 'https://github.com/ysawa/ysawacom', target: '_blank', external: true
